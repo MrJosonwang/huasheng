@@ -1,0 +1,31 @@
+<% include head %>
+<div class = "row">
+	<div class = "col-sm-l"></div>
+	<div class = "col-sm-4">
+		<table class="table table-bordered">
+		  <tbody>
+		  <% rsGoods.forEach(function(row){ %>
+		    <tr>
+		      <td><img src='../<%-row.goodsimg%>'></td>
+		      <td>
+		      	<%-row.goodsname%><br/>
+		      	<%-row.goodsintro%>
+		      </td>
+		    </tr>
+		    <tr>
+		    	<td>
+		    		价格:<%-row.price%>&nbsp;
+		    		好评度:<%-row.praise%>&nbsp;
+		    		<button type="button" class="btn btn-danger">go</button>
+		    	</td>
+		    </tr>
+		   <% }) %>
+		  </tbody>
+		</table>
+	</div>
+	<div class = "col-sm-6">地图</div>
+	<div class = "col-sm-l"></div>
+</div>
+</body>
+
+</html>
